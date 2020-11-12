@@ -41,9 +41,7 @@ class Queue:
 
 		if(self.front == None): 
 			self.rear = None
-
-# Driver Code 
-if __name__== '__main__': 
+def main():
 	q = Queue() 
 	q.EnQueue(10) 
 	q.EnQueue(20) 
@@ -55,4 +53,8 @@ if __name__== '__main__':
 	q.DeQueue() 
 	print("Queue Front " + str(q.front.data)) 
 	print("Queue Rear " + str(q.rear.data)) 
+# Driver Code 
+if __name__== '__main__': 
+	main()
+	
 	
