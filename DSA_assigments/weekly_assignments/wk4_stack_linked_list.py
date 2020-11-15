@@ -1,14 +1,8 @@
-'''Python supports automatic garbage collection so deallocation of memory 
-is done implicitly. However to force it to deallocate each node after use, 
-add the following code: 
+# create program to implement a stack using linked list
 
-	import gc		 #added at the start of program 
-	gc.collect()	 #to be added wherever memory is to be deallocated 
-'''
-
-class Node: 
+# Class to create nodes of linked list 
+class linked_list_node: 
 	
-	# Class to create nodes of linked list 
 	# constructor initializes node automatically 
 	def __init__(self,data): 
 		self.data = data 
@@ -20,26 +14,25 @@ class Stack:
 	def __init__(self): 
 		self.head = None
 	
-	# Checks if stack is empty 
+	# Checks if stack is same as empty
 	def isempty(self): 
 		if self.head == None: 
 			return True
 		else: 
 			return False
 	
-	# Method to add data to the stack 
-	# adds to the start of the stack 
+	# Method to add data to the stack (head)
 	def push(self,data): 
 		
 		if self.head == None: 
-			self.head=Node(data) 
+			self.head=linked_list_node(data) 
 			
 		else: 
-			newnode = Node(data) 
-			newnode.next = self.head 
-			self.head = newnode 
+			new_node = linked_list_node(data) 
+			new_node.next = self.head 
+			self.head = new_node 
 	
-	# Remove element that is the current head (start of the stack) 
+	# Remove element that is the current head
 	def pop(self): 
 		
 		if self.isempty(): 
@@ -48,10 +41,10 @@ class Stack:
 		else: 
 			# Removes the head node and makes 
 			#the preceeding one the new head 
-			poppednode = self.head 
+			popped_node = self.head 
 			self.head = self.head.next
-			poppednode.next = None
-			return poppednode.data 
+			popped_node.next = None
+			return popped_node.data 
 	
 	# Returns the head node data 
 	def peek(self): 
@@ -62,43 +55,46 @@ class Stack:
 		else: 
 			return self.head.data 
 	
-	# Prints out the stack	 
+	# Prints stack	 
 	def display(self): 
 		
-		iternode = self.head 
+		inter_node = self.head 
 		if self.isempty(): 
-			print("Stack Underflow") 
+			print("Stack ") 
 		
 		else: 
 			
-			while(iternode != None): 
+			while(inter_node != None): 
 				
-				print(iternode.data,"->",end = " ") 
-				iternode = iternode.next
+				print(inter_node.data,"->",end = " ") 
+				inter_node = inter_node.next
 			return
-		
-# Driver code 
-MyStack = Stack() 
+# main function		
+def main():	
+	
+	the_stack = Stack() 
+	the_stack.push(6) 
+	the_stack.push(11) 
+	the_stack.push(25) 
+	the_stack.push(9) 
+	the_stack.push(33) 
 
-MyStack.push(11) 
-MyStack.push(22) 
-MyStack.push(33) 
-MyStack.push(44) 
+	# Display stack elements 
+	the_stack.display() 
 
-# Display stack elements 
-MyStack.display() 
+	# Print top element of stack 
+	print("\nTop element is: ",the_stack.peek()) 
 
-# Print top element of stack 
-print("\nTop element is ",MyStack.peek()) 
+	# Delete top elements of stack 
+	the_stack.pop() 
+	the_stack.pop() 
 
-# Delete top elements of stack 
-MyStack.pop() 
-MyStack.pop() 
+	# Display stack elements 
+	the_stack.display() 
 
-# Display stack elements 
-MyStack.display() 
+	# Print top element of stack 
+	print("\nTop element is: ", the_stack.peek()) 
 
-# Print top element of stack 
-print("\nTop element is ", MyStack.peek()) 
+if __name__ =="__main__":
+	main()
 
-# This code is contributed by Mathew George 

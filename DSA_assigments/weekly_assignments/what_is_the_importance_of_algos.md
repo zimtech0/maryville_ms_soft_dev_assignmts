@@ -1,0 +1,6 @@
+1. What is the importance of algorithm analysis?
+Algorithms help us develop the necessary steps to solve complex problems. Additionally, by studying and analyzing algorithms, we can reduce program perfomance issues in regards to computational complexity (space and time). 
+
+1. Why is it important for both beginners as well as advanced programmers to be knowledgeable about it? 
+The different algorithms that computer scientist study are as varied as the problems that they solve. However, chances are good that the problem you are trying to solve is similar to another problem in some respects that already has a solution or algorithm to produce a solution. By developing a good understanding of a large range of algorithms, you will be able to choose or develop the right one for a problem and apply it properly. Also, studying algoritms will help both beginners and advanced programmers to hone their skills in this respect to developing more efficient programs. Many of the problems, though they may not seem realistic, require the same set of algorithmic knowledge that comes up every day in the real world. The better the understanding we have about algorithms and computational complexity the more proficient we become in developing solutions for difficult problems. 
+

@@ -1,9 +1,8 @@
-# Python3 program to demonstrate linked list 
-# based implementation of queue 
+# implement que using linked list
 
-# A linked list (LL) node 
-# to store a queue entry 
-class Node: 
+# A linked list (LL) node  to stre queue entries
+
+class linked_list_node: 
 	
 	def __init__(self, data): 
 		self.data = data 
@@ -11,8 +10,8 @@ class Node:
 
 # A class to represent a queue 
 
-# The queue, front stores the front node 
-# of LL and rear stores the last node of LL 
+# The queue, front stores the front node of Linked List
+# rear stores the last node of Linked List 
 class Queue: 
 	
 	def __init__(self): 
@@ -23,7 +22,7 @@ class Queue:
 	
 	# Method to add an item to the queue 
 	def EnQueue(self, item): 
-		temp = Node(item) 
+		temp = linked_list_node(item) 
 		
 		if self.rear == None: 
 			self.front = self.rear = temp 
@@ -41,6 +40,7 @@ class Queue:
 
 		if(self.front == None): 
 			self.rear = None
+# main function
 def main():
 	q = Queue() 
 	q.EnQueue(10) 
@@ -51,9 +51,9 @@ def main():
 	q.EnQueue(40) 
 	q.EnQueue(50) 
 	q.DeQueue() 
-	print("Queue Front " + str(q.front.data)) 
-	print("Queue Rear " + str(q.rear.data)) 
-# Driver Code 
+	print("Queue Front:  " + str(q.front.data)) 
+	print("Queue Rear:  " + str(q.rear.data)) 
+
 if __name__== '__main__': 
 	main()
 	
