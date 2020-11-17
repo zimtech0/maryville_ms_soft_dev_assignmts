@@ -10,6 +10,8 @@ Dictionaries don't support the sequence operation of the sequence data types lik
 
 How are they coded differently and what different implementations they have?
 
-In Python, a list is created by placing all the items (elements) inside square brackets [] , separated by commas. It can have any number of items and they may be of different types (integer, float, string etc.). A list can also have another list as an item which is called a nested list.
+In Python, a list is created by placing all the items (elements) inside square brackets [] , separated by commas. It can have any number of items and they may be of different types (integer, float, string etc.). A list can also have another list as an item which is called a nested list. The implementation uses a contiguous array of references to other objects, and keeps a pointer to this array and the array’s length in a list head structure.
 
-To create a Python dictionary, a sequence of items need to be passed inside curly braces {} , and separated by using a comma (,). Each item has a key and a value expressed as a "key:value" pair. The values can belong to any data type and they can repeat, but the keys must remain unique.
+This makes indexing a list (L[i]) an operation whose cost is independent of the size of the list or the value of the index.
+
+To create a Python dictionary, a sequence of items need to be passed inside curly braces {} , and separated by using a comma (,). Each item has a key and a value expressed as a "key:value" pair. The values can belong to any data type and they can repeat, but the keys must remain unique. Python dictionaries are like hash tables in regards to implementation. 
