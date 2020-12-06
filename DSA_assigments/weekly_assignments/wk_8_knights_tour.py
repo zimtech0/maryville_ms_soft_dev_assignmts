@@ -33,7 +33,7 @@ class KnightsTour:
     def generate_legal_moves(self, cur_pos): #list of legal moves that knight can take next
         
         
-        possible_pos = []
+        possible_pos = [] 
         move_offsets = [(1, 2), (1, -2), (-1, 2), (-1, -2),
                         (2, 1), (2, -1), (-2, 1), (-2, -1)]
 
