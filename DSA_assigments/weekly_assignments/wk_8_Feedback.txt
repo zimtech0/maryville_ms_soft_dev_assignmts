@@ -1,0 +1,9 @@
+1). What was one thing you learned from the readings, discussion, or assignment? This week was an accumulation of all the reading materials that I have learned over the course and there were many. But I implemented 
+
+2). What is one question you have after this week's work was completed? How well will I do on this final project
+
+3). What was the hardest part of this week? Making the video in hopes of capturing the key points of my code as will as implmenting some of the code based on my algorithm.
+
+4). What was the easiest part of this week? Developing the algorithm.
+
+5). How long do you estimate you spent on material for this week? 12hrs
