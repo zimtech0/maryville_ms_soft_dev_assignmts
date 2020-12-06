@@ -1,0 +1,13 @@
+Why utilize maps and graphs as structures instead of trees?  
+
+What are the advantages and disadvantages?
+
+Trees can be viewed as special types of graphs. Rooted trees can be viewed as directed graphs with the lack of direct cycles.
+
+Additionally, when we attempt to model certain processes or systems, trees are not sufficient since there is a need to represent things like cycles, undirected connections, and other properties.
+
+Using a road map as an example,w e cannot represent a road map with trees since a map consists of cycles and connected components which could never be represented using a tree.
+
+The advantage of using a graph  to represent a roadmap is that it is highly relatable to real world modelling, making it easier for everyone to understand.
+
+However some real world problems cause the graph model to become very complex in represenation.
